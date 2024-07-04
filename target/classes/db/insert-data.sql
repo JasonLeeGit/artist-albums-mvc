@@ -1,0 +1,11 @@
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('2 Unlimited', 'The Very Best Of', 'Electronic','Vinyl');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Bee Gees', 'Saturday Night Fever', 'Disco','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Blur', 'Blur', 'Britpop','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Blur', 'Parklife', 'Britpop','MP3,CD');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Coldplay', 'A Head Full Of Dreams', 'Alternative Rock','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('ColdPlay', 'Parachutes', 'Alternative Rock','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Oasis', 'Be Here Now', 'Indie','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Oasis', 'Whats The Story Morning Glory', 'Indie','MP3');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Oasis', 'Standing on the Shoulder of Giants', 'Indie','CD');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Red Hot Chili Peppers', 'Californication', 'Rock','MP3,Vinyl');
+INSERT INTO albums (artistname, albumname, genre, format) VALUES ('Red Hot Chili Peppers', 'Stadium Arcadium', 'Rock','MP3');
