@@ -1,7 +1,6 @@
 package com.ltd.coders.software.artist.albums.mvc.dao;
 
 import static org.junit.Assert.assertEquals;
-import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -15,17 +14,13 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
-import org.springframework.util.StringUtils;
 
 import com.ltd.coders.software.artist.albums.mvc.model.Album;
 import com.ltd.coders.software.artist.albums.mvc.model.AlbumMapper;
 
 public class AlbumDaoImplTest {
-
-	//TODO try adding test containers
 	
 	@Mock
 	private NamedParameterJdbcTemplate mockNamedParameterJdbcTemplate;
@@ -42,7 +37,6 @@ public class AlbumDaoImplTest {
 
 	@BeforeEach
 	public void setUp() throws Exception {
-
 		MockitoAnnotations.initMocks(this);
 
 		classUnderTest = new AlbumDaoImpl(mockNamedParameterJdbcTemplate, albumMapper);
@@ -77,7 +71,6 @@ public class AlbumDaoImplTest {
 
 	@Test
 	public void findAll() {
-
 		when(mockNamedParameterJdbcTemplate.query("SELECT * FROM ALBUMS", albumMapper))
 				.thenReturn(allAlbumsListToReturn);
 
@@ -105,13 +98,4 @@ public class AlbumDaoImplTest {
 
 		assertEquals(0, resultsList.size());
 	}
-	
-//	@Test
-//	public void delete() {
-//		when(mockNamedParameterJdbcTemplate.update("DELETE FROM ALBUMS WHERE id= :id", mockSqlParameterSource)).thenReturn(1);
-//		
-//		int rows = classUnderTest.delete(1);
-//
-//		assertEquals(1, rows);
-//	}
 }

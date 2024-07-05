@@ -21,7 +21,8 @@ import com.ltd.coders.software.artist.albums.mvc.util.DataUtils;
 import com.ltd.coders.software.artist.albums.mvc.validator.AlbumFormValidator;
 
 /**
- * cd c:/users/softw/eclipse-workspace/artist.albums.mvc mvn clean jetty:run
+ * cd c:/users/softw/eclipse-workspace/artist.albums.mvc 
+ * mvn clean jetty:run
  * http://localhost:8080/
  */
 
@@ -106,7 +107,6 @@ public class AlbumController {
 
 		logger.debug("showAddForm()");
 
-		//Album album = new Album();
 		album.setArtistName("");
 		album.setAlbumName("");
 		album.setGenre("");
