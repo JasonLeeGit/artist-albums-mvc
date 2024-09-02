@@ -22,7 +22,6 @@ public class MyServletInitializer
 
     @Override
     protected String[] getServletMappings() {
-    	System.out.println("MyServletInitializer.getServletMappings");
         return new String[]{"/"};
     }
 }

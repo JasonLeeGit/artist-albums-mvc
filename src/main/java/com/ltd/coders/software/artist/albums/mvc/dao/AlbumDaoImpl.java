@@ -37,7 +37,7 @@ public class AlbumDaoImpl implements AlbumDao {
 		try {
 			result = namedParameterJdbcTemplate.queryForObject(sql, params, albumMapper);
 		} catch (EmptyResultDataAccessException e) {
-			// do nothing, return null
+			// do nothing
 		}
 		return result;
 	}
@@ -60,7 +60,7 @@ public class AlbumDaoImpl implements AlbumDao {
 	public int save(Album album) {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 
-		String sql = "INSERT INTO ALBUMS(artistname, albumname, genre, format) "
+		String sql = "INSERT INTO ALBUMS(artistname, albumname, genre, format) " 
 				+ "VALUES ( :artistName, :albumName, :genre, :format)";
 		namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(album), keyHolder);
 		album.setId(keyHolder.getKey().intValue());

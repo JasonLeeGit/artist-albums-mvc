@@ -21,7 +21,7 @@ import com.ltd.coders.software.artist.albums.mvc.util.DataUtils;
 import com.ltd.coders.software.artist.albums.mvc.validator.AlbumFormValidator;
 
 /**
- * cd c:/users/softw/eclipse-workspace/artist.albums.mvc 
+ * cd ~/git-repository/artist-albums-mvc 
  * mvn clean jetty:run
  * http://localhost:8080/
  */
@@ -88,11 +88,11 @@ public class AlbumController {
 	}
 
 	@GetMapping("/albums/{id}")
-	public String show(@PathVariable("id") int Id, Model model) {
+	public String show(@PathVariable("id") int id, Model model) {
 
-		logger.debug("show() Id: {}", Id);
+		logger.debug("show() Id: {}", id);
 
-		Album album = albumService.findById(Id);
+		Album album = albumService.findById(id);
 		if (album == null) {
 			model.addAttribute("alert", "danger");
 			model.addAttribute("msg", " not found!");
@@ -114,7 +114,6 @@ public class AlbumController {
 		model.addAttribute("albumForm", album);
 
 		return "albumform";
-
 	}
 
 	@GetMapping("/albums/{id}/update")
@@ -138,7 +137,6 @@ public class AlbumController {
 		redirectAttributes.addFlashAttribute("msg", "Album is deleted!");
 
 		return "redirect:/";
-
 	}
 	
 	private void popuateLists(Model model) {

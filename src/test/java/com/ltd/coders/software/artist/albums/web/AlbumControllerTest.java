@@ -37,10 +37,9 @@ public class AlbumControllerTest {
 	private List<String> formatList;
 	private String response;
 	
-	@SuppressWarnings("deprecation")
 	@BeforeEach
 	public void setup() {
-		MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.openMocks(this);
 
 		classUnderTest = new AlbumController(mockAlbumService);
 		
@@ -140,7 +139,6 @@ public class AlbumControllerTest {
 		verify(mockAlbumService, times(1)).delete(1);
 		assertEquals("redirect:/", response);
 	}
-	
 	
 	@Test
 	public void testShow() {	

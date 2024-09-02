@@ -47,7 +47,7 @@
 				  <spring:url value="/albums/${albums.id}" var="albumUrl" />
 				  <spring:url value="/albums/${albums.id}/delete" var="deleteUrl" />
 				  <spring:url value="/albums/${albums.id}/update" var="updateUrl" />
-				  <button class="btn btn-info" onclick="location.href='${albumUrl}'">Query</button>
+				  <button class="btn btn-info" onclick="location.href='${albumUrl}'">Info</button>
 				  <button class="btn btn-primary" onclick="location.href='${updateUrl}'">Update</button>
 				  <button class="btn btn-danger" onclick="this.disabled=true;post('${deleteUrl}')">Delete</button>
                 </td>

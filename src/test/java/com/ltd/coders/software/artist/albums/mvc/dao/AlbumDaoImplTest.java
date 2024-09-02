@@ -37,7 +37,7 @@ public class AlbumDaoImplTest {
 
 	@BeforeEach
 	public void setUp() throws Exception {
-		MockitoAnnotations.initMocks(this);
+		MockitoAnnotations.openMocks(this);
 
 		classUnderTest = new AlbumDaoImpl(mockNamedParameterJdbcTemplate, albumMapper);
 		params.put("id", 1);

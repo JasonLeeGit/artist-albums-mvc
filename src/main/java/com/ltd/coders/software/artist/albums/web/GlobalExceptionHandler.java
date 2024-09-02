@@ -31,5 +31,4 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         mav.setViewName(DEFAULT_ERROR_VIEW);
         return mav;
     }
-
 }

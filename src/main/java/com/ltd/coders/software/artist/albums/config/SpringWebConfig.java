@@ -27,15 +27,14 @@ public class SpringWebConfig implements WebMvcConfigurer {
         viewResolver.setViewClass(JstlView.class);
         viewResolver.setPrefix("/WEB-INF/views/jsp/");
         viewResolver.setSuffix(".jsp");
-        System.out.println("VIEW RESOLVER");
         return viewResolver;
     }
 
     @Bean
     ResourceBundleMessageSource messageSource() {
-        ResourceBundleMessageSource rb = new ResourceBundleMessageSource();
-        rb.setBasenames(new String[] { "messages/messages", "messages/validation" });
-        return rb;
+        ResourceBundleMessageSource resourceBundleMessageSource = new ResourceBundleMessageSource();
+        resourceBundleMessageSource.setBasenames(new String[] { "messages/messages", "messages/validation" });
+        return resourceBundleMessageSource;
     }
 
 }
