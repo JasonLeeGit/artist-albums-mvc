@@ -1,2 +1,8 @@
+com\ltd\coders\software\artist\albums\mvc\test\suite\JunitTestSuite.class
+com\ltd\coders\software\artist\albums\mvc\controller\DeleteAlbumControllerTest.class
 com\ltd\coders\software\artist\albums\mvc\dao\AlbumDaoImplTest.class
-com\ltd\coders\software\artist\albums\web\AlbumControllerTest.class
+com\ltd\coders\software\artist\albums\mvc\controller\ListAllAlbumsByGenreControllerTest.class
+com\ltd\coders\software\artist\albums\mvc\controller\ListAllAlbumsControllerTest.class
+com\ltd\coders\software\artist\albums\mvc\controller\EditAlbumControllerTest.class
+com\ltd\coders\software\artist\albums\mvc\controller\ShowAlbumControllerTest.class
+com\ltd\coders\software\artist\albums\mvc\test\suite\TestRunner.class

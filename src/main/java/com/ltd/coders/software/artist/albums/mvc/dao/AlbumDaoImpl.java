@@ -37,14 +37,14 @@ public class AlbumDaoImpl implements AlbumDao {
 		try {
 			result = namedParameterJdbcTemplate.queryForObject(sql, params, albumMapper);
 		} catch (EmptyResultDataAccessException e) {
-			// do nothing
+			
 		}
 		return result;
 	}
 
 	@Override
 	public List<Album> findAll() {
-		String sql = "SELECT * FROM ALBUMS"; // ORDER BY artistname
+		String sql = "SELECT * FROM ALBUMS ORDER BY ARTISTNAME";
 		List<Album> result = namedParameterJdbcTemplate.query(sql, albumMapper);
 		return result;
 	}
@@ -68,8 +68,7 @@ public class AlbumDaoImpl implements AlbumDao {
 	}
 
 	@Override
-	public int update(Album album) {
-		
+	public int update(Album album) {	
 		String sql = "UPDATE ALBUMS SET "
 				+ "artistname=:artistName, albumname=:albumName, genre=:genre, format=:format WHERE id=:id";
 		return namedParameterJdbcTemplate.update(sql, getSqlParameterByModel(album));

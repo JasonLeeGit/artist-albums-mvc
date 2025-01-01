@@ -5,8 +5,7 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
 import com.ltd.coders.software.artist.albums.config.SpringCoreConfig;
 import com.ltd.coders.software.artist.albums.config.SpringWebConfig;
 
-public class MyServletInitializer
-        extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class MyServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     // services and data sources
     @Override

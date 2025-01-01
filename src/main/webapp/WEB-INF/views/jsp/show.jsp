@@ -18,7 +18,7 @@
 		</div>
 	</c:if>
 
-	<h1>Album Detail</h1>
+	<h1>Album Information</h1>
 
     <div class="row">
         <label for="staticID" class="col-sm-2 col-form-label">ID</label>

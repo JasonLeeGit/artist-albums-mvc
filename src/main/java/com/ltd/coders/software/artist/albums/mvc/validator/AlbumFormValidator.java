@@ -19,7 +19,7 @@ public class AlbumFormValidator implements Validator {
 	public void validate(Object target, Errors errors) {
 		Album album = (Album) target;
 		
-		// artistName is validated in Album class);
+		// artistName is validated in Album class;
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "albumName", "NotEmpty.albumForm.albumName");
 		ValidationUtils.rejectIfEmptyOrWhitespace(errors, "genre", "NotEmpty.albumForm.genre");
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "genre", "NotEmpty.albumForm.genredd");

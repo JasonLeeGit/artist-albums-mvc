@@ -1,4 +1,4 @@
-package com.ltd.coders.software.artist.albums.web;
+package com.ltd.coders.software.artist.albums.mvc;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
