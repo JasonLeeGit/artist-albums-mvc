@@ -74,7 +74,6 @@ public class ShowAlbumController {
 		return "albumform";
 	}
 	
-	
 	private void popuateLists(Model model) {
 		model.addAttribute("formatList", DataUtils.FORMAT_LIST);
 		model.addAttribute("genreList", DataUtils.GENRE);

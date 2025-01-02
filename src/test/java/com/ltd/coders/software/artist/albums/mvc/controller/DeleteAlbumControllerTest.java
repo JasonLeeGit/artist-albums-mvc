@@ -47,4 +47,16 @@ public class DeleteAlbumControllerTest {
 		verify(mockAlbumService, times(1)).delete(1);
 		assertEquals("redirect:/", response);
 	}
+	
+	@Test
+	public void testDeleteZeroId() {
+		when(mockAlbumService.delete(0)).thenReturn(0);
+		
+		response = classUnderTest.delete(0, mockRedirectAttributes);
+		
+		verify(mockRedirectAttributes, times(1)).addFlashAttribute("alert", "delete failed");
+		verify(mockRedirectAttributes, times(1)).addFlashAttribute("msg", "Album ID less thean zero");
+		verify(mockAlbumService, times(0)).delete(0);
+		assertEquals("redirect:/", response);
+	}
 }

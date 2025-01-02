@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class DataUtils {
     public static final List<String> FORMAT_LIST = Arrays.asList("MP3", "CD", "Vinyl");
-    public static final Map<String, String> GENRE = createListOfGenres();
+	public static final Map<String, String> GENRE = createListOfGenres();
 
     private static Map<String, String> createListOfGenres() {
         Map<String, String> genre = new LinkedHashMap<>();

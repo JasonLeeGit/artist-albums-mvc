@@ -2,7 +2,7 @@
 <div class="container">
 	<hr>
 	<footer>
-		<p>&copy; software.coders.ltd</p>
+		<p>&copy; software.coders.ltd <script>document.write(new Date().getFullYear());</script></p>
 	</footer>
 </div>
 

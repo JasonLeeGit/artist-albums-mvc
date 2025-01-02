@@ -41,12 +41,23 @@ public class ListAllAlbumsByGenreControllerTest {
 	}
 
 	@Test
-	public void testFindAllByGenre() {
+	public void testFindAllAlbumsByGenre() {
 		when(mockAlbumService.findAllByGenre("Indie")).thenReturn(allAlbumsList);
 
 		response = classUnderTest.listAllAlbumsByGenre("Indie", mockModel);
 
 		verify(mockAlbumService, times(1)).findAllByGenre("Indie");
+		verify(mockModel, times(1)).addAttribute("albums", allAlbumsList);
+		assertEquals("/allalbums", response);
+	}
+	
+	@Test
+	public void testFindAllAlbumsByGenreWhenGenreNotFound() {
+		when(mockAlbumService.findAllByGenre("GenreMissing")).thenReturn(allAlbumsList);
+
+		response = classUnderTest.listAllAlbumsByGenre("GenreMissing", mockModel);
+
+		verify(mockAlbumService, times(1)).findAllByGenre("GenreMissing");
 		verify(mockModel, times(1)).addAttribute("albums", allAlbumsList);
 		assertEquals("/allalbums", response);
 	}

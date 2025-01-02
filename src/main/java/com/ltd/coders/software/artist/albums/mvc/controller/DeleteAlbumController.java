@@ -38,9 +38,12 @@ public class DeleteAlbumController {
 
 		if (id > 0) {
 			albumService.delete(id);
+			redirectAttributes.addFlashAttribute("alert", "success");
+			redirectAttributes.addFlashAttribute("msg", "Album is deleted!");
+		} else {
+			redirectAttributes.addFlashAttribute("alert", "delete failed");
+			redirectAttributes.addFlashAttribute("msg", "Album ID less thean zero");
 		}
-		redirectAttributes.addFlashAttribute("alert", "success");
-		redirectAttributes.addFlashAttribute("msg", "Album is deleted!");
 
 		return "redirect:/";
 	}
