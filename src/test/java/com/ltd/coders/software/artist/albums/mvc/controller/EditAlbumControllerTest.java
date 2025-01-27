@@ -67,7 +67,7 @@ public class EditAlbumControllerTest {
 		response = classUnderTest.saveOrUpdateAlbum(album, mockBindingResult, mockModel, mockRedirectAttributes);
 
 		verify(mockAlbumService, times(0)).saveOrUpdate(album);
-		assertEquals("albumform", response);
+		assertEquals("albumForm", response);
 	}
 
 	@Test

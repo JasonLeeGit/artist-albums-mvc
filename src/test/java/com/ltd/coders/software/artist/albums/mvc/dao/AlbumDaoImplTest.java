@@ -70,8 +70,8 @@ public class AlbumDaoImplTest {
 	}
 
 	@Test
-	public void findAll() {
-		when(mockNamedParameterJdbcTemplate.query("SELECT * FROM ALBUMS", albumMapper))
+	public void findAll() {	
+		when(mockNamedParameterJdbcTemplate.query("SELECT * FROM ALBUMS ORDER BY ARTISTNAME", albumMapper))
 				.thenReturn(allAlbumsListToReturn);
 
 		resultsList = classUnderTest.findAll();
