@@ -1,12 +1,13 @@
 package com.ltd.coders.software.artist.albums.mvc.controller;
 
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -38,14 +39,14 @@ public class EditAlbumController {
 	}
 
 	@PostMapping("/albums")
-	public String saveOrUpdateAlbum(@ModelAttribute("albumForm") @Validated Album album, BindingResult bindingResult,
+	public String saveOrUpdateAlbum(@ModelAttribute("albumForm") @Valid Album album, BindingResult bindingResult,
 			Model model, final RedirectAttributes redirectAttributes) {
 
 		logger.debug("saveOrUpdateAlbum() : {}", album);
 
 		if (bindingResult.hasErrors()) {
 			popuateLists(model);
-			return "albumForm";
+			return "albumform";
 		} else {
 			redirectAttributes.addFlashAttribute("alert", "success");
 			if (album.isNew()) {
