@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
 @Configuration
-@ComponentScan({"com.ltd.coders.software.artist.albums.web", "com.ltd.coders.software.artist.albums.mvc"})
+@ComponentScan({ "com.ltd.coders.software.artist.albums.mvc"})
 public class SpringWebConfig implements WebMvcConfigurer {
 
     @Override
@@ -36,5 +36,4 @@ public class SpringWebConfig implements WebMvcConfigurer {
         resourceBundleMessageSource.setBasenames(new String[] { "messages/messages", "messages/validation" });
         return resourceBundleMessageSource;
     }
-
 }
