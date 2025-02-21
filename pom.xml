@@ -8,11 +8,10 @@
   	<artifactId>artist.albums.mvc</artifactId>
   	<version>0.0.1-SNAPSHOT</version>
   	<name>Artist With Albums MVC Maven Webapp</name>
-  	<url>http://www.example.com</url>
   	<packaging>war</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <jdk.version>11</jdk.version>
+        <jdk.version>17</jdk.version>
         <spring.version>5.2.22.RELEASE</spring.version>
         <jetty.version>9.4.45.v20220203</jetty.version>
         <servletapi.version>4.0.1</servletapi.version>
@@ -103,7 +102,7 @@
       	<dependency>
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-test</artifactId>
-		    <version>3.3.1</version>
+		    <version>3.3.8</version>
 		    <scope>test</scope>
     	 </dependency>
 
@@ -122,8 +121,7 @@
                     </webApp>
                 </configuration>
             </plugin>
-
-            <!-- junit 5 -->
+			<!-- junit 5 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
