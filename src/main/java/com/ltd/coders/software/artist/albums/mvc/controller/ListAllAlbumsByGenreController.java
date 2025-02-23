@@ -33,7 +33,7 @@ public class ListAllAlbumsByGenreController {
 	}
 
 	@GetMapping(value = { "/albums/genre/{genre}" })
-	public String listAllAlbumsByGenre(@PathVariable("genre") String genre, Model model) {
+	public String listAllAlbumsByGenre(@PathVariable String genre, Model model) {
 		logger.debug("listAlbums()...");
 
 		if (genre != null) {

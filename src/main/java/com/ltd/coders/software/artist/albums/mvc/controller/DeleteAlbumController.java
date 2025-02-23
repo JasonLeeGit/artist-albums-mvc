@@ -33,7 +33,7 @@ public class DeleteAlbumController {
 	}
 
 	@PostMapping("/albums/{id}/delete")
-	public String delete(@PathVariable("id") int id, final RedirectAttributes redirectAttributes) {
+	public String delete(@PathVariable int id, final RedirectAttributes redirectAttributes) {
 		logger.debug("delete() : {}", id);
 
 		if (id > 0) {

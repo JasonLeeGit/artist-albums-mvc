@@ -35,7 +35,7 @@ public class ShowAlbumController {
 	}
 	
 	@GetMapping("/albums/{id}")
-	public String showInfo(@PathVariable("id") int id, Model model) {
+	public String showInfo(@PathVariable int id, Model model) {
 
 		logger.debug("show() Id: {}", id);
 
@@ -64,7 +64,7 @@ public class ShowAlbumController {
 	}
 	
 	@GetMapping("/albums/{id}/update")
-	public String showUpdateForm(@PathVariable("id") int id, Model model) {
+	public String showUpdateForm(@PathVariable int id, Model model) {
 
 		logger.debug("showUpdateForm() : {}", id);
 
