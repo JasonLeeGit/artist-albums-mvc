@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.ltd.coders.software.artist.albums.mvc.dao.AlbumDao;
 import com.ltd.coders.software.artist.albums.mvc.model.Album;
@@ -30,6 +31,7 @@ public class AlbumServiceImpl implements AlbumService {
 	}
 
 	@Override
+	@Transactional
 	public int saveOrUpdate(Album album) {
 
 		if (findById(album.getId()) == null) {
@@ -41,6 +43,7 @@ public class AlbumServiceImpl implements AlbumService {
 	}
 
 	@Override
+	@Transactional
 	public int delete(int id) {
 		return albumDao.delete(id);
 	}
